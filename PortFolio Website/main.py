@@ -1,7 +1,7 @@
 from flask import Flask, abort, render_template, redirect, url_for, flash, request
 import smtplib
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Skilli@123'
+app.config['SECRET_KEY'] = 'Your Secret Key'
 
 
 @app.route("/")
@@ -24,15 +24,15 @@ def contact():
         phone = request.form['phone']
         message = request.form['message']
 
-        my_email = "mirzaskilful@gmail.com"
-        password = "xhtc ofev advy wbcp"
+        my_email = "Your Email"
+        password = "Your Password"
 
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
             connection.sendmail(
                 from_addr=my_email,
-                to_addrs="mirzaskilful@gmail.com",
+                to_addrs="Addres You Wan to send to",
                 msg=f"Subject: New Message from Blog Website \n\n {name} \n {email} \n {phone} \n {message}")
 
         return render_template("contact.html", message_sent=True)
