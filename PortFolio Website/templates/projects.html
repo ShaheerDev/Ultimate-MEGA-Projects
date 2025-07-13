@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+</head>
+<body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% include 'header.html' %}
+
+  <h1 style="margin-left:550px; margin-top: 100px;"><strong>My Projects</strong></h1>
+
+  <div class="container">
+  <div class="fancy-text-box-two mx-auto" style="max-width: 800px; margin-top: 50px; padding: 30px;">
+    <p>
+      As I’ve grown in my coding journey, I’ve challenged myself with more complex and meaningful Python projects. These go beyond just basic scripts — they use real-world tools, external APIs, and deeper logic to solve problems. Here are the some of the Python projects I’ve created so far:
+    <ul>
+    <li>🔍 Amazon Price Tracker with Email Notifications: 
+    One of my most useful projects, this script scrapes product prices from Amazon and alerts me via email if the price drops below my target. It uses BeautifulSoup to parse the product page, requests to make HTTP calls, and SMTP for sending emails. I also had to handle user-agent headers to avoid getting blocked. This project taught me how to connect multiple Python modules together to build something practical and helpful.</li>
+
+
+    <li>🌦️ Rain Alert Weather Bot: 
+    This bot connects to the OpenWeatherMap API to check the hourly weather forecast for my city. If rain is predicted within the next 12 hours, it sends me a custom message. I learned how to use API authentication, parse JSON data, and use conditionals with time-based filtering. This project was my first step into the world of real-time data and weather automation.</li>
+
+
+    <li>🧠 Flashcard Learning App (GUI + Timer): 
+    This isn’t just a simple app — it uses Tkinter’s GUI canvas, flipping flashcards after a delay using the after() method, and switching between English and foreign words. I also added images, error handling, and custom behavior when a user clicks buttons like “Correct” or “Wrong.” It helped me understand event-driven programming and how real educational apps work under the hood.</li>
+
+
+    <li>🕵️‍♂️ Sheety-Powered Habit Tracker: 
+    Using the Sheety API, I created a fitness or habit tracking app that lets me input exercise data, which automatically gets saved to a Google Sheet. I used POST requests to send data to the Sheety endpoint and formatted the output neatly. This taught me how to use web APIs to work with real-time spreadsheets and gave me the power to build my own backend without needing a database.</li>
+
+
+    <li>🌐 Flask Portfolio Website: 
+    My Flask-based portfolio site isn’t just a simple static page. I built it using the Flask framework, created multiple routes (@app.route()), used Jinja2 templates for dynamic content, and connected pages like Home, About, and Projects. I learned how back-end and front-end work together, how to structure folders (templates/, static/), and how to use flash() and redirect() to handle messages and actions.</li>
+
+
+    <li>📊 Google Trends Data Visualization (Matplotlib + Pandas): 
+    This project involved using Pandas to clean and transform data, and Matplotlib to create twin y-axis plots, styled lines, and proper x-axis formatting using date locators. It helped me explore how data science uses math, statistics, and Python code to show trends and insights from real search data.</li>
+  </ul>
+
+
+    I’m excited to keep building more complex projects that challenge my skills and help me learn new technologies. Each project is a step forward in my coding journey, and I can’t wait to see where it takes me next!
+    To see all of the Projects I have created, check out my <a href="https://github.com/ShaheerDev/Projects---100-Days-of-Python-By-Angela-Yu">GitHub Page</a>
+  </p>
+  </div>
+</div>
+
+
+</body>
+</html>
