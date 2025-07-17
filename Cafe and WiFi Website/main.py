@@ -9,12 +9,12 @@ from wtforms.validators import DataRequired, Email, Length, URL, InputRequired
 from forms import AddNewCafe
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'supersecretkey123'
+app.config['SECRET_KEY'] = 'Your Secret Key'
 
 class Base(DeclarativeBase):
     pass
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cafes.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'Your DataBase URL'
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 class Cafe(db.Model):
