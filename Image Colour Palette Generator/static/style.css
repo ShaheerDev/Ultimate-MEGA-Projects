@@ -1,0 +1,35 @@
+.custom-navbar {
+    background-color: #0F828C !important;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: white !important;
+}
+.custom-navbar .nav-link:hover {
+    color: #FFD700 !important;
+}
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+
+.upload-form button:hover {
+  background-color: #2980b9;
+}
+
+.color-box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 10px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
