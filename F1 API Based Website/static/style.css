@@ -1,0 +1,35 @@
+body{
+    background-color: #e5e5e5;
+    color: #2d2d2d;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  color: #2d2d2d;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.custom-navbar {
+    background-color: #e63946 !important;
+    padding: 10px 20px;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: white !important;
+}
+.custom-navbar .nav-link:hover {
+    color: #d62828 !important;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+}
+
+.card {
+    border: 2px solid red;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}

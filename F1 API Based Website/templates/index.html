@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1 style="text-align: center; margin-top: 20px;"><strong>F1 Legends</strong></h1>
+    <h5 style="text-align: center; margin-top: 20px;"><strong>Relive the Glory. Explore the Legends. Feel the Speed.</strong></h5>
+    <div class="card" style="width: 700px; margin: 30px auto;">
+        <div class="card-body text-center">
+            <video width="100%" controls style="margin-bottom: 20px;">
+                <source src="{{ url_for('static', filename='assets/title.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="card" style="width: 1000px; margin: 30px auto;">
+        <div class="card-body text-center">
+            <img src="{{ url_for('static', filename='assets/teams.png') }}" alt="teams car" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+    <div class="card" style="width: 1000px; margin: 30px auto;">
+        <div class="card-body text-center">
+            <img src="{{ url_for('static', filename='assets/drivers.png') }}" alt="teams car" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
