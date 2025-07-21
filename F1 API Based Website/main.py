@@ -2,7 +2,7 @@ from flask import Flask, abort, render_template, redirect, url_for, flash, reque
 import requests
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Skilli@123'
+app.config['SECRET_KEY'] = 'Your Secret Key'
 
 
 @app.route("/")
