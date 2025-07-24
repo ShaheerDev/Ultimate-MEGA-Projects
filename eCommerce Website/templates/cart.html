@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <header class="masthead custom-header">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7 text-center">
+                    <div class="page-heading">
+                        <h1>Your Cart</h1>
+                        <span class="subheading">See the items you are going to purchase in the cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% if items %}
+        <div class="mt-4">
+            <h3 style="margin-left: 25px; font-size: 40px;"><strong>Total: Rs {{ total }}</strong></h3>
+        </div>
+        {% for item in items %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{ item.image_url }}" class="card-img-top" alt="Item Pic" style="max-height: 250px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.description|safe }}</p>
+                    <a href="{{ url_for('remove_item_cart', item_id=item.id) }}" type="button" class="btn btn-success">Remove Item</a>
+                </div>
+            </div>
+
+
+
+        {% endfor %}
+        <form method="POST" action="{{ url_for('cart_checkout') }}">
+            {% for item in items %}
+                <input type="hidden" name="item_ids" value="{{ item.id }}">
+            {% endfor %}
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success btn-lg">Buy All Now</button>
+            </div>
+        </form>
+
+
+    {% else %}
+    <h1 style="margin-left: 500px;"><strong>Your cart is empty.</strong></h1>
+    {% endif %}
+
+</body>
+</html>
